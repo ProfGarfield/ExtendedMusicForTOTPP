@@ -1,8 +1,3 @@
--- If you want to disable extended music, change the false in the next line to true
-if false then -- change this to "if true then" (without quote marks) to disable extended music
-    return {disable = true}
-end
---
 -- Note that any line starting with a -- is a comment
 -- as is anything between --[[ and --]]
 -- You can write playlists of files in the Music folder

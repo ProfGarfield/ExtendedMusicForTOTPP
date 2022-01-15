@@ -1,10 +1,12 @@
 history_file = "../console.history"
 
+-- To disable extended music, comment out the next line
+require("extendedMusic")
+
 local readHistory = function ()
    pcall(dofile, history_file)
 end
 
-require("extendedMusic")
 
 local writeHistory = function ()
    io.output(history_file)

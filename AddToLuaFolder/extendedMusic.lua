@@ -1,9 +1,6 @@
 
 local linesPerWindow = 20
 local settings = require("extendedMusicSettings")
-if settings.disable then
-    return
-end
 
 math.randomseed(os.time())
 -- Helper Functions
