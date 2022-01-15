@@ -8,7 +8,7 @@ It also provides all the Civilization II Music converted to .mp3 files as requir
 
 ## Requirements
 
-1.  Test of Time Patch Project Version 0.18.1 or later
+Test of Time Patch Project Version 0.18.1 or later.
 
 ## Installation
 
@@ -113,6 +113,8 @@ If you comment out the lines without replacing them in an Extended Original game
 
 In order to choose a playlist in game, open the Pick Music Menu, and choose the third option.  If you changed `@PICKMUSICTOT` as suggested above, this line will be called "Choose Playlist".  Otherwise, it will be called "Crusade".  Selecting this option will open the menu to choose a playlist or to select a particular track in the playlist.
 
+Note that some Lua scenarios may override this option with their own custom music.
+
 ### Creating and Changing Playlists
 
 One of the default playlists contains all the .mp3 files in the Music Folder.  If that's all you're interested in, you don't have to do anything.
@@ -175,6 +177,25 @@ randomize = true,
 ### The "Everything" Playlist
 
 The playlist[0] is special.  It is built the same way as all the other playlists, except that it contains all the .mp3 files in the Music folder, _except_ the files in the playlist.  If you don't want this playlist, you can delete it, or comment it out by adding -- to the start of each line of the playlist.
+
+### Changing the Pick Music Menu Tracks
+
+Towards the end of the extendedMusicSettings.lua file, there are a series of lines of the form
+```lua
+PICKMUSICTOT[X] = "Some Music File.mp3"
+```
+By changing the file names for these lines, you can change the music that is played when you choose the corresponding item in the Pick Music Menu.  (Note that you don't need to place a comma after each file name here.)  Two lines are particularly important:
+```lua
+PICKMUSICTOT[0] = "Funeral March.mp3" 
+PICKMUSICTOT[1] = "Ode to Joy.mp3"
+```
+The `PICKMUSICTOT[0]` determines the file that will be played when a tribe is destroyed, while `PICKMUSICTOT[1]` determines the file that will be played when a city begins celebrating the We Love the Leader Day.
+
+In addition, You can use `"EXTENDED-MUSIC"` (spelled exactly like that) to specify that a track number should instead open the playlist menu.  This is track number 2 (third track, but track numbers start at 0) by default.
+
+## More Information
+
+If you need further help with this extension, would like to report a bug, or have other comments on it, the best place to do so is in this [Civfanatics thread](https://forums.civfanatics.com/threads/totpp-custom-music-patch.650161/).
 
 
 
