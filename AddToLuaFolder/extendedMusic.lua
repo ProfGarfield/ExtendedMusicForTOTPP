@@ -394,8 +394,8 @@ changePlaylist = function()
     for key,plist in pairs(playlists) do
         menuTable[key+offset] = plist.name
     end
-    menuText = "Choose a playlist.  Playlists can be changed by modifying "..civ.getToTDir().."\\lua\\extendedMusicSettings.lua"
-    menuTitle = "Extended Music"
+    local menuText = "Choose a playlist.  Playlists can be changed by modifying "..civ.getToTDir().."\\lua\\extendedMusicSettings.lua"
+    local menuTitle = "Extended Music"
     local choice = menu(menuTable,menuText,menuTitle)
     if choice == 1 then
         return
