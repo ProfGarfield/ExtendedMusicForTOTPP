@@ -107,6 +107,8 @@ Then, add in the following lines in their place:
 
 If you comment out the lines without replacing them in an Extended Original game (or most scenarios), Civ II will default to the information in the `Game.txt` file in the `Original` folder.  Similarly, if the lines are commented out in the Midgard scenario, the game will refer to the file in the `Fantasy` folder.
 
+The folder ModifiedGameTxt contains Game.txt files to replace the standard files, if you don't want to make the changes yourself.
+
 ## Usage
 
 ### Choosing a Playlist in Game
