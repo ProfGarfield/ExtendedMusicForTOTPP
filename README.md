@@ -20,7 +20,7 @@ If your Test of Time directory already has a `Music` folder (as it will if you h
 
 Copy the downloaded Music folder and all its contents into the Test of Time directory.  If you were using the old "CustomMusicForTOTPP" patch, you may have music files you wish to add into the new Music folder.  Having this music folder and its contents is essential to making sure the sample playlists work properly.
 
-If you haven't already, enable the DirectShow Music patch in the TOTPPlauncher.
+If you haven't already, enable the DirectShow Music patch in the TOTPPlauncher.  Also, make sure that the Lua Scripting and Lua Scenario Events patches are enabled.
 
 ### Optional Installation Instruction
 
